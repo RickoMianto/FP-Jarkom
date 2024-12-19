@@ -483,7 +483,7 @@ interface Tunnel0
 ip address 192.168.1.222 255.255.255.252
 mtu 1476
 tunnel source FastEthernet0/0
-tunnel destination 192.168.1.221
+tunnel destination 192.168.1.214
 no shutdown
 
 # Router Cabang
@@ -491,7 +491,7 @@ interface Tunnel0
 ip address 192.168.1.221 255.255.255.252
 mtu 1476
 tunnel source FastEthernet0/0
-tunnel destination 192.168.1.222
+tunnel destination 192.168.1.218
 no shutdown
 ```
 ### Test Ping
