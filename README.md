@@ -53,7 +53,28 @@ Prefix IP: **192.168.0.0/23**
 
 ### A1
 ```
+# Lantai 1 
+enable
+configure terminal
+interface fa0/1
+ip address 192.168.0.129 255.255.255.128
+no shutdown
 
+# Server dan Data Center
+interface  fa0
+IP Address: 192.168.0.130
+Subnet Mask: 255.255.255.128
+Gateway: 192.168.0.129
+# Dept IT
+interface  fa0
+IP Address: 192.168.0.131
+Subnet Mask: 255.255.255.128
+Gateway: 192.168.0.129
+# Dept HR
+interface  fa0
+IP Address: 192.168.0.132
+Subnet Mask: 255.255.255.128
+Gateway: 192.168.0.129
 ```
 ### A2
 ```
