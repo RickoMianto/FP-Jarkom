@@ -431,7 +431,6 @@ interface Vlan1
 ip nat inside source list 1 interface FastEthernet0/0 overload
 ip classless
 access-list 1 permit any
-ip route 0.0.0.0 0.0.0.0 dhcp
 
 end
 write memory
