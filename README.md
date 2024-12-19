@@ -473,6 +473,8 @@ end
 write memory
 ```
 ### Testing
+![Screenshot 2024-12-19 193341](https://github.com/user-attachments/assets/74d5b0d7-fa17-4c68-b2bd-a831a2717eda)
+
 
 ## 6. GRE Tunnel
 
@@ -495,3 +497,9 @@ tunnel destination 192.168.1.218
 no shutdown
 ```
 ### Test Ping
+Lantai 5
+![Screenshot 2024-12-19 194843](https://github.com/user-attachments/assets/4a43af09-c91e-4003-99d0-a6319ef2f25e)
+
+Router Cabang
+![Screenshot 2024-12-19 194923](https://github.com/user-attachments/assets/d1840f4c-aba2-425a-8b7a-6fd0ac9faf42)
+
