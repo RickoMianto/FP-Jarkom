@@ -65,11 +65,13 @@ interface  fa0
 IP Address: 192.168.0.130
 Subnet Mask: 255.255.255.128
 Gateway: 192.168.0.129
+
 # Dept IT
 interface  fa0
 IP Address: 192.168.0.131
 Subnet Mask: 255.255.255.128
 Gateway: 192.168.0.129
+
 # Dept HR
 interface  fa0
 IP Address: 192.168.0.132
