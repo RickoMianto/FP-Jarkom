@@ -397,11 +397,81 @@ write memory
 
 ### Router NAT
 ```
+enable
+configure terminal
 
+interface FastEthernet1/0
+ ip address 192.168.1.213 255.255.255.252
+ ip nat inside
+ duplex auto
+ speed auto
+
+interface FastEthernet0/1
+ ip address 192.168.1.217 255.255.255.252
+ ip nat inside
+ duplex auto
+ speed auto
+
+interface FastEthernet0/0
+ ip address dhcp
+ ip nat outside
+ duplex auto
+ speed auto
+
+interface FastEthernet1/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+
+interface Vlan1
+ no ip address
+ shutdown
+
+ip nat inside source list 1 interface FastEthernet0/0 overload
+ip classless
+access-list 1 permit any
+ip route 0.0.0.0 0.0.0.0 dhcp
+
+end
+write memory
 ```
 ### Lantai 5
 ```
+enable
+configure terminal
 
+interface FastEthernet0/1
+ ip address 192.168.1.206 255.255.255.252
+ ip nat inside
+ duplex auto
+ speed auto
+
+interface FastEthernet1/0
+ ip address 192.168.1.1 255.255.255.192
+ ip nat inside
+ duplex auto
+ speed auto
+
+interface FastEthernet0/0
+ ip address 192.168.1.218 255.255.255.252
+ ip nat outside
+ duplex auto
+ speed auto
+
+interface FastEthernet1/1
+ no ip address
+ shutdown
+
+interface Vlan1
+ no ip address
+ shutdown
+
+ip nat inside source list 1 interface FastEthernet0/0 overload
+access-list 1 permit any
+
+end
+write memory
 ```
 ### Testing
 
