@@ -80,48 +80,219 @@ Gateway: 192.168.0.129
 ```
 ### A2
 ```
+# Lantai 1
+enable
+configure terminal
+interface fa0/0
+ip address 192.168.1.193 255.255.255.252
+no shutdown
 
+# Lantai 2
+enable
+configure terminal
+interface fa0/1
+ip address 192.168.1.194 255.255.255.252
+no shutdown
 ```
 ### A3
 ```
+# Lantai 2
+enable
+configure terminal
+interface fa1/0
+ip address 192.168.0.1 255.255.255.128
+no shutdown
+ip dhcp excluded-address 192.168.0.1 192.168.0.4
+ip dhcp pool Lantai2
+network 192.168.0.0 255.255.255.128
+default-router 192.168.0.1
+exit
+exit
+write memory
 
+# Dept Rnd
+interface  fa0
+IP Address: DHCP
+Subnet Mask: DHCP
+Gateway: DHCP
+
+# Dept Pemasaran
+interface  fa0
+IP Address: DHCP
+Subnet Mask: DHCP
+Gateway: DHCP
+
+# Dept Penjualan
+interface  fa0
+IP Address: DHCP
+Subnet Mask: DHCP
+Gateway: DHCP
 ```
 ### A4
 ```
+# Lantai 2
+enable
+configure terminal
+interface fa0/0
+ip address 192.168.1.197 255.255.255.252
+no shutdown
 
+# Lantai 3
+enable
+configure terminal
+interface fa0/1
+ip address 192.168.1.198 255.255.255.252
+no shutdown
 ```
 ### A5
 ```
+# Lantai 3
+enable
+configure terminal
+interface fa1/0
+ip address 192.168.1.65 255.255.255.192
+no shutdown
 
+# Dept Keuangan
+interface  fa0
+IP Address: 192.168.1.66
+Subnet Mask: 255.255.255.192
+Gateway: 192.168.1.65
+
+#Dept Legal
+interface  fa0
+IP Address: 192.168.1.67
+Subnet Mask: 255.255.255.192
+Gateway: 192.168.1.65
 ```
 ### A6
 ```
+# Lantai 3
+enable
+configure terminal
+interface fa0/0
+ip address 192.168.1.201 255.255.255.252
+no shutdown
 
+# Lantai 4
+enable
+configure terminal
+interface fa0/1
+ip address 192.168.1.202 255.255.255.252
+no shutdown
 ```
 ### A7
 ```
+# Lantai 4
+enable
+configure terminal
+interface fa1/0
+ip address 192.168.1.129 255.255.255.192
+no shutdown
 
+# Dept Manajemen
+interface  fa0
+IP Address: 192.168.1.130
+Subnet Mask: 255.255.255.192
+Gateway: 192.168.1.129
+
+# Dept Customer Service
+interface  fa0
+IP Address: 192.168.1.131
+Subnet Mask: 255.255.255.192
+Gateway: 192.168.1.129
 ```
 ### A8
 ```
+# Lantai 4
+enable
+configure terminal
+interface fa0/0
+ip address 192.168.1.205 255.255.255.252
+no shutdown
 
+# Lantai 5
+enable
+configure terminal
+interface fa0/1
+ip address 192.168.1.206 255.255.255.252
+no shutdown
 ```
 ### A9
 ```
+# Lantai 5
+enable
+configure terminal
+interface fa1/0
+ip address 192.168.1.1 255.255.255.192
+no shutdown
 
+# Dept Cyber Security
+interface  fa0
+IP Address: 192.168.1.2
+Subnet Mask: 255.255.255.192
+Gateway: 192.168.1.1
+
+# Ruang Meeting
+interface  fa0
+IP Address: 192.168.1.3
+Subnet Mask: 255.255.255.192
+Gateway: 192.168.1.1
+
+# Depart HR
+interface  fa0
+IP Address: 192.168.1.4
+Subnet Mask: 255.255.255.192
+Gateway: 192.168.1.1
 ```
 ### A10
 ```
+# Router Cabang
+enable
+configure terminal
+interface fa0/1
+ip address 192.168.1.209 255.255.255.252
+no shutdown
 
+# Cabang
+interface  fa0
+IP Address: 192.168.1.210
+Subnet Mask: 255.255.255.252
+Gateway: 192.168.1.209
 ```
 ### A11
 ```
+# Router Cabang
+enable
+configure terminal
+interface fa0/0
+ip address 192.168.1.214 255.255.255.252
+no shutdown
 
+# Router NAT
+enable
+configure terminal
+interface fa1/0
+ip address 192.168.1.213 255.255.255.252
+no shutdown
 ```
 ### A12
 ```
+# Lantai 5
+enable
+configure terminal
+interface fa0/0
+ip address 192.168.1.218 255.255.255.252
+no shutdown
 
+# Router NAT
+enable
+configure terminal
+interface fa0/0
+ip address 192.168.1.217 255.255.255.252
+no shutdown
 ```
+### A13
 
 ## 4. Routing
 
