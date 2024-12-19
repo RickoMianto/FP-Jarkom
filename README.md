@@ -1,9 +1,11 @@
-# FP-Jarkom
+# FP-Jarkom Kelompok A8
+
+
 
 ## 1. Topologi
 ![Screenshot 2024-12-18 170841](https://github.com/user-attachments/assets/94aee5b1-4c20-4391-9a77-f33a23563866)
 
-## Pembagian IP dan Rute Subnetting
+## 2. Pembagian IP dan Rute Subnetting
 
 **Metode VLSM**  
 Prefix IP: **192.168.0.0/23**
@@ -47,3 +49,16 @@ Prefix IP: **192.168.0.0/23**
 | A12        | 192.168.1.216  | 255.255.255.252   | 192.168.1.219    | 192.168.1.217 - 192.168.1.218       |
 | A13        | 192.168.1.220  | 255.255.255.252   | 192.168.1.223    | 192.168.1.221 - 192.168.1.222       |
 
+## 3. Konfigurasi Router dan Client
+
+
+
+## 4. Routing
+
+
+
+## 5. NAT
+
+
+
+## 6. GRE Tunnel
