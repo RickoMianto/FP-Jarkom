@@ -308,12 +308,54 @@ tunnel source FastEthernet0/0
 tunnel destination 192.168.1.222
 no shutdown
 ```
+
 ## 4. Routing
 
+### Lantai 1
+```
 
+```
+### Lantai 2
+```
+
+```
+### Lantai 3
+```
+
+```
+### Lantai 4
+```
+
+```
+### Lantai 5
+```
+
+```
+### Router Cabang
+```
+
+```
 
 ## 5. NAT
 
 
 
 ## 6. GRE Tunnel
+
+### A13
+```
+# Lantai 5
+interface Tunnel0
+ip address 192.168.1.222 255.255.255.252
+tunnel source FastEthernet0/0
+tunnel destination 192.168.1.221
+no shutdown
+
+# Router Cabang
+interface Tunnel0
+ip address 192.168.1.221 255.255.255.252
+tunnel source FastEthernet0/0
+tunnel destination 192.168.1.222
+no shutdown
+```
+### Test Ping
